@@ -4,6 +4,8 @@ Flask-Bcrypt
 Flask-JWT-Extended
 Flask-Migrate
 cloudinary
+python-dotenv
+sqlalchemy-serializer
 
 
 
