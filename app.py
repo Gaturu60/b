@@ -35,7 +35,6 @@
 #     app = create_app()
 #     app.run(debug=True)
 
-
 import os
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
@@ -62,6 +61,11 @@ def create_app():
     jwt.init_app(app)
     migrate.init_app(app, db)
     CORS(app, supports_credentials=True)
+
+    # Define a default route for '/'
+    @app.route('/')
+    def home():
+        return "Welcome to the Flask App!"
 
     # Register Blueprints
     app.register_blueprint(admin_bp, url_prefix='/admin')
