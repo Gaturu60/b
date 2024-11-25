@@ -6,6 +6,7 @@ Flask-Migrate
 cloudinary
 python-dotenv
 sqlalchemy-serializer
+flask-cors
 
 
 
